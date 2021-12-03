@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul#primary_menu li ul.sub-menu{
+    @apply hidden;
+  }
+  .mobile-menu {
+    @apply bg-black text-white py-5 px-10
+  }
+  .mobile-menu ul li{
+    @apply p-2 text-sm 
+  }
+
+}

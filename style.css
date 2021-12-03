@@ -1,0 +1,200 @@
+/*
+Theme Name: PXA Themes
+Text Domain: pxa
+Version: 1.0
+Requires at least: 5.0
+Requires PHP: ^5.6
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Author: PXA team
+Author URI: https://pexadesign.com/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	CSS Reset
+
+----------------------------------------------------------------------------- */
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+@font-face {
+    font-family: Lato;
+    font-weight: 300;
+    src: url(/assets/fonts/Lato-Light.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 300;
+    font-style: italic;
+    src: url(/assets/fonts/Lato-LightItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 400;
+    src: url(/assets/fonts/Lato-Regular.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 400;
+    font-style: italic;
+    src: url(/assets/fonts/Lato-RegularItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 700;
+    src: url(/assets/fonts/Lato-Bold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 700;
+    font-style: italic;
+    src: url(/assets/fonts/Lato-BoldItalic.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 900;
+    src: url(/assets/fonts/Lato-Black.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Lato;
+    font-weight: 900;
+    font-style: italic;
+    src: url(/assets/fonts/Lato-BlackItalic.ttf) format("ttf");
+  }
+
+  :root{
+  	--primary-color: #C52345;
+  }
+
+/* -------------------------------------------------------------------------- */
+
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------- */
+
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+}
+
+  ul#primary_menu > li:hover > a,
+  ul#primary_menu ul li:hover > a,
+  ul#primary_menu > li:active > a,
+  ul#primary_menu > li:focus > a,
+  ul#primary_menu > li.current-menu-item > a,
+  ul#primary_menu > li.current-page-ancestor > a{
+    color: var(--primary-color);    
+    transition: color .25s all;
+  }
+
+  #primary_menu li:hover ul.sub-menu {
+    display: block;
+}
+
+.desktop ul#primary_menu li ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    background: #fff;
+    z-index: 999;
+    width: 250px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.desktop ul#primary_menu li.menu-item-has-children > ul.sub-menu li a{		
+	padding: 0 10px;
+	display: block;
+}
+
+.desktop ul#primary_menu li.menu-item-has-children > ul.sub-menu li:hover a{
+	background: var(--primary-color);
+	color: #fff;
+}
+
+.mobile #primary_menu li.menu-item-has-children{
+	display: block;
+}
+
+.mobile #primary_menu li.menu-item-has-children .sub-menu-toggle{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+#primary_menu > li{
+	padding: 10px;
+}
+
+#primary_menu li {
+    line-height: 35px;    
+}
+
+  #primary_menu li.menu-item-has-children{
+  	display: flex;
+  	align-items: center;
+  	flex-wrap: wrap;
+  	justify-content: space-between; 
+  	position: relative; 	
+  }
+
+  header.header-wrapper{
+    box-shadow: 0 -3px 5px #000;
+}
+
+

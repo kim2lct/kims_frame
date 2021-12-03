@@ -1,0 +1,44 @@
+{
+  "name": "pxa_themes",
+  "version": "1.0.0",
+  "description": "Wordpress Plain Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css",
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "build": "webpack --mode development",
+    "clean": "rm -rf build/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kim2lct/pxa_themes.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plain",
+    "themes"
+  ],
+  "author": "kim2lct",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kim2lct/pxa_themes/issues"
+  },
+  "homepage": "https://github.com/kim2lct/pxa_themes#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "alpinejs": "^3.5.2",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "webpack": "^5.64.3",
+    "webpack-cli": "^4.9.1"
+  }
+}
